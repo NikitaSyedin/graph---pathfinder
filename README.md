@@ -6,7 +6,7 @@
 
 ```bash
 ./ShortestPath [OPTIONS] -f <path/to/graph/file>
-
+```
 
 Где [OPTIONS] могут быть:
 -f <path/to/graph/file>: Указывает путь к файлу с данными о графе.
