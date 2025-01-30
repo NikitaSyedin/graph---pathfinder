@@ -13,6 +13,7 @@
 * ```-t```: Выводит время выполнения программы.
 ## Примеры
 
+```bash
   ./ShortestPath -f ../src/examples/basic_example_1.txt
   ./ShortestPath -t -f ../src/examples/basic_example_1.txt
-        
+```  
