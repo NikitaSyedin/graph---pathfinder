@@ -8,11 +8,11 @@
 ./ShortestPath [OPTIONS] -f <path/to/graph/file>
 ```
 
-Где [OPTIONS] могут быть:
--f <path/to/graph/file>: Указывает путь к файлу с данными о графе.
--t: Выводит время выполнения программы.
+#Опции
+*```bash-f <path/to/graph/file>```: Указывает путь к файлу с данными о графе.
+*```bash-t```: Выводит время выполнения программы.
+#Примеры
 
-#Примеры:
   ./ShortestPath -f ../src/examples/basic_example_1.txt
   ./ShortestPath -t -f ../src/examples/basic_example_1.txt
         
