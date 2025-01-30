@@ -22,7 +22,7 @@
 Для корректной установки необходимо склонировать репозиторий:
 
 ```bash
-git clone <URL_вашего_репозитория>
+git clone https://github.com/NikitaSyedin/graph---pathfinder/tree/main
 cd <название_папки_репозитория>
 ```
 
