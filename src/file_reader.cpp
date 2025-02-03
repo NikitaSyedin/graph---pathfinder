@@ -37,13 +37,13 @@ Graph readGraphFromFile(const string& filename) {
             if (source < 0 || dist < 0 || source >= V || dist >= V ||
              weight < 1 || weight > 100 || green >10 || green < 0 || red > 10 || red < 0) 
             {
-                throw InvalidVertexError("Error: The index of a vertex or other value is beyond the acceptable range. At line " + to_string(i + 2) + " of" + filename);
+                throw InvalidVertexError("Error: The index of a vertex or other value is beyond the acceptable range. At line " + to_string(i + 2) + " of " + filename);
             }
             myGraph.addEdge(source, dist, weight, green, red);
         } 
         else 
         {
-            throw FileFormatError("Error: Invalid format for edge data at line " + to_string(i + 2) + " of" + filename);
+            throw FileFormatError("Error: Invalid format for edge data at line " + to_string(i + 2) + " of " + filename);
         }
     }
     if(!getline(file, line))
