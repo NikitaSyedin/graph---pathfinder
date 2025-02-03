@@ -46,21 +46,25 @@ int shortestPath(Graph myGraph)
     {
         int u = pq.top().from;
         pq.pop();
-        for (auto x : myGraph.adj[u]) 
+        if(u == myGraph.endNode)
         {
-            if(u == myGraph.endNode)
+            break;
+        }
+        else
+        {
+            for (auto x : myGraph.adj[u]) 
             {
-                break;
-            }
-            int v = x.to;
-            int weight = x.weight;
-            int greenTime = x.green;
-            int redTime = x.red;
-            int delay = calculateDelay(myGraph.dist[u], greenTime, redTime);
+                
+                int v = x.to;
+                int weight = x.weight;
+                int greenTime = x.green;
+                int redTime = x.red;
+                int delay = calculateDelay(myGraph.dist[u], greenTime, redTime);
 
-            if (myGraph.dist[v] > myGraph.dist[u] + weight + delay) {
-                myGraph.dist[v] = myGraph.dist[u] + weight + delay;
-                pq.push({myGraph.dist[v], v});
+                if (myGraph.dist[v] > myGraph.dist[u] + weight + delay) {
+                    myGraph.dist[v] = myGraph.dist[u] + weight + delay;
+                    pq.push({myGraph.dist[v], v});
+                }
             }
         }
     }
